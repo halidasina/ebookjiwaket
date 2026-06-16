@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terima Kasih — Panduan Mengatasi Ketagihan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green-dark: #1a3a2a;
+      --green-mid:  #2d6a4f;
+      --green-light:#52b788;
+      --gold:       #c9a84c;
+      --gold-light: #f0d080;
+      --cream:      #faf7f0;
+      --white:      #ffffff;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, var(--green-dark) 0%, #0f2d1e 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .card {
+      background: var(--cream);
+      border-radius: 24px;
+      max-width: 540px;
+      width: 100%;
+      padding: 56px 48px;
+      text-align: center;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.3);
+    }
+
+    .checkmark {
+      width: 72px;
+      height: 72px;
+      background: linear-gradient(135deg, var(--green-light), var(--green-mid));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 28px;
+      font-size: 2rem;
+    }
+
+    .arabic {
+      font-family: 'Amiri', serif;
+      font-size: 1.3rem;
+      color: var(--green-mid);
+      margin-bottom: 6px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--green-dark);
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      font-size: 0.97rem;
+      color: #666;
+      margin-bottom: 36px;
+      line-height: 1.6;
+    }
+
+    .download-box {
+      background: linear-gradient(135deg, var(--green-dark), #0d2218);
+      border-radius: 16px;
+      padding: 32px 28px;
+      margin-bottom: 28px;
+    }
+
+    .download-box p {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.88rem;
+      margin-bottom: 20px;
+    }
+
+    .btn-download {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--gold), #a8832c);
+      color: var(--green-dark);
+      font-weight: 700;
+      font-size: 1.05rem;
+      padding: 16px 40px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 6px 24px rgba(201,168,76,0.35);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn-download:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 32px rgba(201,168,76,0.5);
+    }
+
+    .steps {
+      text-align: left;
+      background: var(--white);
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-bottom: 28px;
+    }
+
+    .steps h3 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+    }
+
+    .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 12px;
+      font-size: 0.9rem;
+      color: #444;
+    }
+
+    .step:last-child { margin-bottom: 0; }
+
+    .step-num {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      background: var(--green-light);
+      color: var(--white);
+      border-radius: 50%;
+      font-size: 0.72rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+
+    .ayat {
+      background: rgba(45,106,79,0.08);
+      border-left: 3px solid var(--green-light);
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    .ayat p {
+      font-style: italic;
+      font-size: 0.88rem;
+      color: var(--green-dark);
+    }
+
+    .ayat span {
+      font-size: 0.78rem;
+      color: var(--green-light);
+      font-style: normal;
+      display: block;
+      margin-top: 4px;
+    }
+
+    .footer-note {
+      font-size: 0.8rem;
+      color: #999;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 520px) {
+      .card { padding: 40px 24px; }
+      h1 { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="checkmark">✓</div>
+
+    <div class="arabic">جَزَاكَ اللّٰهُ خَيْرًا</div>
+    <h1>Pembayaran Berjaya!</h1>
+    <p class="subtitle">Terima kasih kerana mempercayai panduan ini. Semoga Allah permudahkan perjalanan pemulihan anda.</p>
+
+    <div class="download-box">
+      <p>Klik butang di bawah untuk muat turun e-book anda sekarang</p>
+      <a href="https://drive.google.com/file/d/1S2bUaym_4FtSRED2M_3F8bbQkifvDW5I/view?usp=sharing" target="_blank" class="btn-download">
+        ⬇ Muat Turun E-Book
+      </a>
+    </div>
+
+    <div class="steps">
+      <h3>Cara Muat Turun</h3>
+      <div class="step">
+        <div class="step-num">1</div>
+        <span>Klik butang kuning di atas — Google Drive akan terbuka</span>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <span>Klik ikon <strong>muat turun (↓)</strong> di penjuru kanan atas Google Drive</span>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <span>Fail PDF akan tersimpan di peranti anda. Selamat membaca!</span>
+      </div>
+    </div>
+
+    <div class="ayat">
+      <p>"Sesungguhnya bersama kesulitan ada kemudahan."</p>
+      <span>— Surah Al-Inshirah 94:6</span>
+    </div>
+
+    <p class="footer-note">Simpan halaman ini atau <strong>screenshot</strong> butang muat turun sebelum tutup. Sekiranya ada masalah, hubungi kami.</p>
+  </div>
+</body>
+</html>

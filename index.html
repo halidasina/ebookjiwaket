@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panduan Mengatasi Ketagihan – Islam & Psikologi Moden</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green-dark: #1a3a2a;
+      --green-mid:  #2d6a4f;
+      --green-light:#52b788;
+      --gold:       #c9a84c;
+      --gold-light: #f0d080;
+      --cream:      #faf7f0;
+      --white:      #ffffff;
+      --text-dark:  #1a1a1a;
+      --text-mid:   #444;
+      --text-light: #777;
+      --shadow:     0 4px 30px rgba(0,0,0,0.12);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-dark);
+      background: var(--cream);
+      line-height: 1.7;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, var(--green-dark) 0%, #0f2d1e 60%, #162e20 100%);
+      color: var(--white);
+      text-align: center;
+      padding: 90px 20px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(201,168,76,0.18);
+      border: 1px solid var(--gold);
+      color: var(--gold-light);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 6px 18px;
+      border-radius: 20px;
+      margin-bottom: 28px;
+    }
+
+    .hero-arabic {
+      font-family: 'Amiri', serif;
+      font-size: 1.5rem;
+      color: var(--gold-light);
+      margin-bottom: 10px;
+      opacity: 0.9;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 14px;
+      color: var(--white);
+    }
+
+    .hero h1 span { color: var(--gold); }
+
+    .hero-sub {
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.75);
+      max-width: 520px;
+      margin: 0 auto 36px;
+      font-weight: 500;
+    }
+
+    .hero-ayat {
+      background: rgba(255,255,255,0.07);
+      border-left: 3px solid var(--gold);
+      max-width: 500px;
+      margin: 0 auto 44px;
+      padding: 16px 24px;
+      border-radius: 0 8px 8px 0;
+      text-align: left;
+    }
+    .hero-ayat p { font-style: italic; color: rgba(255,255,255,0.88); font-size: 0.97rem; }
+    .hero-ayat span { font-size: 0.8rem; color: var(--gold); font-style: normal; display: block; margin-top: 6px; }
+
+    .btn-primary {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--gold), #a8832c);
+      color: var(--green-dark);
+      font-weight: 700;
+      font-size: 1.05rem;
+      padding: 16px 42px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 6px 24px rgba(201,168,76,0.35);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 32px rgba(201,168,76,0.45); }
+
+    .hero-note { font-size: 0.82rem; color: rgba(255,255,255,0.45); margin-top: 14px; }
+
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 56px;
+      flex-wrap: wrap;
+    }
+    .hero-stat { text-align: center; }
+    .hero-stat strong { display: block; font-size: 1.8rem; font-weight: 700; color: var(--gold); }
+    .hero-stat span { font-size: 0.82rem; color: rgba(255,255,255,0.55); text-transform: uppercase; letter-spacing: 1px; }
+
+    /* ── SECTION SHARED ── */
+    section { padding: 80px 20px; }
+    .container { max-width: 1080px; margin: 0 auto; }
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--green-light);
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 700;
+      text-align: center;
+      color: var(--green-dark);
+      margin-bottom: 14px;
+    }
+    .section-desc {
+      text-align: center;
+      color: var(--text-mid);
+      max-width: 600px;
+      margin: 0 auto 52px;
+      font-size: 1rem;
+    }
+
+    /* ── PROBLEM ── */
+    .problem { background: var(--white); }
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+    }
+    .problem-card {
+      background: var(--cream);
+      border-radius: 14px;
+      padding: 28px 24px;
+      border-top: 3px solid var(--green-light);
+    }
+    .problem-card .icon { font-size: 2rem; margin-bottom: 12px; }
+    .problem-card h3 { font-size: 1rem; font-weight: 700; color: var(--green-dark); margin-bottom: 8px; }
+    .problem-card p { font-size: 0.9rem; color: var(--text-mid); }
+
+    /* ── ABOUT THE BOOK ── */
+    .about { background: var(--cream); }
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    @media (max-width: 720px) { .about-inner { grid-template-columns: 1fr; } }
+    .book-mockup {
+      background: linear-gradient(145deg, var(--green-dark), #0d2218);
+      border-radius: 16px;
+      padding: 48px 36px;
+      text-align: center;
+      color: var(--white);
+      box-shadow: 12px 20px 48px rgba(0,0,0,0.28);
+      position: relative;
+    }
+    .book-mockup::after {
+      content: '';
+      position: absolute;
+      left: 0; top: 12px; bottom: 12px;
+      width: 6px;
+      background: var(--gold);
+      border-radius: 0 4px 4px 0;
+    }
+    .book-mockup .bm-tag {
+      background: var(--gold);
+      color: var(--green-dark);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+    .book-mockup h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.7rem;
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+    .book-mockup p { font-size: 0.88rem; color: rgba(255,255,255,0.65); margin-bottom: 28px; }
+    .book-chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+    .book-chip {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.8);
+      font-size: 0.76rem;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+    .about-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--green-dark);
+      margin-bottom: 18px;
+      line-height: 1.25;
+    }
+    .about-text p { color: var(--text-mid); margin-bottom: 16px; font-size: 0.97rem; }
+    .about-checklist { list-style: none; margin-top: 24px; }
+    .about-checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+      color: var(--text-dark);
+    }
+    .about-checklist li::before {
+      content: '✓';
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      background: var(--green-light);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
+    /* ── CHAPTERS ── */
+    .chapters { background: var(--white); }
+    .chapters-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .chapter-card {
+      border: 1px solid #e8e4dc;
+      border-radius: 14px;
+      padding: 28px;
+      background: var(--cream);
+      transition: border-color 0.2s, box-shadow 0.2s;
+      display: flex;
+      gap: 18px;
+    }
+    .chapter-card:hover { border-color: var(--green-light); box-shadow: 0 4px 20px rgba(82,183,136,0.12); }
+    .chapter-num {
+      flex-shrink: 0;
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--green-mid), var(--green-dark));
+      color: var(--white);
+      font-weight: 700;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .chapter-body h3 { font-size: 1rem; font-weight: 700; color: var(--green-dark); margin-bottom: 6px; }
+    .chapter-body p { font-size: 0.86rem; color: var(--text-light); line-height: 1.55; }
+
+    /* ── 7 STEPS ── */
+    .steps { background: linear-gradient(135deg, var(--green-dark) 0%, #0f2d1e 100%); color: var(--white); }
+    .steps .section-label { color: var(--gold); }
+    .steps .section-title { color: var(--white); }
+    .steps .section-desc { color: rgba(255,255,255,0.6); }
+    .steps-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .step-item {
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      padding: 28px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .step-item:last-child { border-bottom: none; }
+    .step-dot {
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(201,168,76,0.15);
+      border: 2px solid var(--gold);
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .step-body h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 6px; color: var(--gold-light); }
+    .step-body p { font-size: 0.9rem; color: rgba(255,255,255,0.65); }
+    .step-tag {
+      display: inline-block;
+      background: rgba(82,183,136,0.15);
+      border: 1px solid rgba(82,183,136,0.3);
+      color: var(--green-light);
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 2px 10px;
+      border-radius: 20px;
+      margin-top: 8px;
+    }
+
+    /* ── WHO IS THIS FOR ── */
+    .audience { background: var(--cream); }
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .audience-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 32px 24px;
+      text-align: center;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+      border-bottom: 3px solid var(--green-light);
+    }
+    .audience-card .aud-icon { font-size: 2.4rem; margin-bottom: 14px; }
+    .audience-card h3 { font-size: 1rem; font-weight: 700; color: var(--green-dark); margin-bottom: 8px; }
+    .audience-card p { font-size: 0.85rem; color: var(--text-light); }
+
+    /* ── QUOTE ── */
+    .quote-section {
+      background: var(--white);
+      padding: 70px 20px;
+      text-align: center;
+    }
+    .quote-box {
+      max-width: 680px;
+      margin: 0 auto;
+      background: linear-gradient(135deg, var(--green-dark), #0d2218);
+      border-radius: 20px;
+      padding: 52px 48px;
+      color: var(--white);
+    }
+    .quote-box .q-arabic {
+      font-family: 'Amiri', serif;
+      font-size: 1.6rem;
+      color: var(--gold-light);
+      margin-bottom: 18px;
+    }
+    .quote-box blockquote {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-style: italic;
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+    .quote-box cite { font-size: 0.85rem; color: var(--gold); }
+
+    /* ── RESOURCES ── */
+    .resources { background: var(--cream); }
+    .resources-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+    }
+    .resource-item {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 20px 22px;
+      border-left: 4px solid var(--green-light);
+    }
+    .resource-item h4 { font-size: 0.95rem; font-weight: 700; color: var(--green-dark); margin-bottom: 4px; }
+    .resource-item p { font-size: 0.83rem; color: var(--text-light); }
+
+    /* ── CTA ── */
+    .cta {
+      background: linear-gradient(135deg, var(--green-dark), #0f2d1e);
+      text-align: center;
+      padding: 90px 20px;
+      color: var(--white);
+    }
+    .cta h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 16px;
+    }
+    .cta h2 span { color: var(--gold); }
+    .cta p { color: rgba(255,255,255,0.65); max-width: 500px; margin: 0 auto 40px; }
+    .btn-outline {
+      display: inline-block;
+      border: 2px solid rgba(255,255,255,0.3);
+      color: rgba(255,255,255,0.75);
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 14px 34px;
+      border-radius: 50px;
+      text-decoration: none;
+      margin-top: 16px;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #0d1f16;
+      color: rgba(255,255,255,0.4);
+      text-align: center;
+      padding: 32px 20px;
+      font-size: 0.83rem;
+    }
+    footer strong { color: rgba(255,255,255,0.65); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .hero-stats { gap: 24px; }
+      .quote-box { padding: 36px 28px; }
+      .btn-primary { padding: 14px 32px; font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════
+     HERO
+════════════════════════════════════════ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge">E-Book · Bahasa Melayu</div>
+    <div class="hero-arabic">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</div>
+    <h1>Panduan Mengatasi<br><span>Ketagihan</span></h1>
+    <p class="hero-sub">Pendekatan Bersepadu: Islam &amp; Psikologi Moden</p>
+
+    <div class="hero-ayat">
+      <p>"Dengan mengingati Allah, tenang tenteram hati."</p>
+      <span>— Surah Ar-Ra'd 13:28</span>
+    </div>
+
+    <a href="#dapatkan" class="btn-primary">Dapatkan E-Book — RM12.90</a>
+    <p class="hero-note">26 halaman · PDF · Sesuai untuk semua</p>
+
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <strong>7</strong>
+        <span>Bab Utama</span>
+      </div>
+      <div class="hero-stat">
+        <strong>7</strong>
+        <span>Langkah Pemulihan</span>
+      </div>
+      <div class="hero-stat">
+        <strong>2</strong>
+        <span>Pendekatan Bersepadu</span>
+      </div>
+      <div class="hero-stat">
+        <strong>30</strong>
+        <span>Hari Pelan Tindakan</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     MASALAH
+════════════════════════════════════════ -->
+<section class="problem">
+  <div class="container">
+    <p class="section-label">Adakah Ini Anda?</p>
+    <h2 class="section-title">Ketagihan Bukan Sekadar "Tabiat Buruk"</h2>
+    <p class="section-desc">Ramai yang salah faham tentang ketagihan. Ini bukan soal disiplin atau kuat semangat — ia lebih dalam daripada itu.</p>
+
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="icon">🔄</div>
+        <h3>Terperangkap dalam Kitaran</h3>
+        <p>Cuba berhenti berulang kali tetapi terus gagal. Rasa hopeless dan tidak tahu apa yang salah.</p>
+      </div>
+      <div class="problem-card">
+        <div class="icon">💔</div>
+        <h3>Orang Tersayang Bergelut</h3>
+        <p>Melihat ahli keluarga atau rakan berjuang dengan ketagihan tetapi tidak tahu cara bantu yang betul.</p>
+      </div>
+      <div class="problem-card">
+        <div class="icon">🌑</div>
+        <h3>Kekosongan Dalam Jiwa</h3>
+        <p>Rasa ada sesuatu yang tidak kena — jiwa kosong walaupun ada segalanya dari segi lahiriah.</p>
+      </div>
+      <div class="problem-card">
+        <div class="icon">😔</div>
+        <h3>Rasa Malu &amp; Bersendirian</h3>
+        <p>Takut dihukum atau diaib. Fikir tiada sesiapa yang boleh faham situasi anda.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     ABOUT
+════════════════════════════════════════ -->
+<section class="about">
+  <div class="container">
+    <div class="about-inner">
+      <div class="book-mockup">
+        <div class="bm-tag">E-Book · PDF</div>
+        <h2>Panduan Mengatasi Ketagihan</h2>
+        <p>Islam &amp; Psikologi Moden · 26 Halaman</p>
+        <div class="book-chips">
+          <span class="book-chip">Al-Quran &amp; Hadith</span>
+          <span class="book-chip">Neurosains</span>
+          <span class="book-chip">CBT</span>
+          <span class="book-chip">Tazkiyatun-Nafs</span>
+          <span class="book-chip">Pelan 30 Hari</span>
+          <span class="book-chip">Teknik 4R</span>
+        </div>
+      </div>
+
+      <div class="about-text">
+        <h2>Dua Sumber Ilmu, Satu Matlamat: Pemulihan Sejati</h2>
+        <p>Panduan ini menggabungkan dua tradisi ilmu yang saling melengkapi — hikmah Islam melalui Al-Quran, Hadith, dan Tazkiyatun-Nafs, serta psikologi moden melalui neurosains dan terapi kognitif-tingkah laku (CBT).</p>
+        <p>Ia bukan sekadar teori. Setiap bab mengandungi langkah praktis yang boleh anda lakukan hari ini, walaupun anda bermula dari zero.</p>
+        <ul class="about-checklist">
+          <li>Fahami sains otak dan kitaran dopamin di sebalik ketagihan</li>
+          <li>Kenali 6 punca mendalam ketagihan dari perspektif Islam &amp; psikologi</li>
+          <li>Ikuti 7 Langkah Tazkiyatun-Nafs untuk pemulihan bersepadu</li>
+          <li>Gunakan Teknik 4R untuk pecahkan kitaran ketagihan</li>
+          <li>Dapatkan Pelan Tindakan 30 Hari yang terperinci</li>
+          <li>Panduan khas untuk keluarga &amp; orang sekeliling</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     CHAPTERS
+════════════════════════════════════════ -->
+<section class="chapters">
+  <div class="container">
+    <p class="section-label">Kandungan E-Book</p>
+    <h2 class="section-title">7 Bab Komprehensif</h2>
+    <p class="section-desc">Dari memahami punca hingga mencegah relaps — semuanya ada dalam panduan ini.</p>
+
+    <div class="chapters-grid">
+      <div class="chapter-card">
+        <div class="chapter-num">1</div>
+        <div class="chapter-body">
+          <h3>Memahami Ketagihan</h3>
+          <p>Apa sebenarnya berlaku dalam otak dan jiwa kita. Sains dopamin, jenis-jenis ketagihan, dan pandangan Islam.</p>
+        </div>
+      </div>
+      <div class="chapter-card">
+        <div class="chapter-num">2</div>
+        <div class="chapter-body">
+          <h3>Punca Ketagihan</h3>
+          <p>Lebih dalam daripada tabiat. Ghaflah, Nafs al-Ammarah, trauma, persekitaran, dan peranan syaitan.</p>
+        </div>
+      </div>
+      <div class="chapter-card">
+        <div class="chapter-num">3</div>
+        <div class="chapter-body">
+          <h3>Peringkat Ketagihan</h3>
+          <p>5 peringkat ketagihan dan alat penilaian diri untuk kenali di mana anda berada sekarang.</p>
+        </div>
+      </div>
+      <div class="chapter-card">
+        <div class="chapter-num">4</div>
+        <div class="chapter-body">
+          <h3>Jalan Pemulihan</h3>
+          <p>7 Langkah Tazkiyatun-Nafs dari Ma'rifatullah hingga Muhasabah, disepadukan dengan CBT.</p>
+        </div>
+      </div>
+      <div class="chapter-card">
+        <div class="chapter-num">5</div>
+        <div class="chapter-body">
+          <h3>Strategi Praktikal Harian</h3>
+          <p>Teknik 4R, gantian tabiat buruk, dan Pelan Tindakan 30 Hari yang boleh dimulakan hari ini.</p>
+        </div>
+      </div>
+      <div class="chapter-card">
+        <div class="chapter-num">6</div>
+        <div class="chapter-body">
+          <h3>Untuk Keluarga &amp; Orang Sekeliling</h3>
+          <p>Cara membantu tanpa merosakkan. Sempadan sihat, doa, dan 3C yang perlu diingat.</p>
+        </div>
+      </div>
+      <div class="chapter-card">
+        <div class="chapter-num">7</div>
+        <div class="chapter-body">
+          <h3>Mencegah Relaps</h3>
+          <p>Mengapa relaps berlaku, pencetus H.A.L.T., dan pelan kecemasan apabila kumbah terjadi.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     7 LANGKAH
+════════════════════════════════════════ -->
+<section class="steps">
+  <div class="container">
+    <p class="section-label">Kaedah Pemulihan</p>
+    <h2 class="section-title">7 Langkah Tazkiyatun-Nafs</h2>
+    <p class="section-desc">Kaedah pemulihan bersepadu yang menggabungkan tradisi ilmu Islam dengan pendekatan psikologi moden.</p>
+
+    <div class="steps-list">
+      <div class="step-item">
+        <div class="step-dot">1</div>
+        <div class="step-body">
+          <h3>Ma'rifatullah — Mengenal Allah</h3>
+          <p>Pulihkan keyakinan bahawa Allah Maha Pengampun dan tidak pernah meninggalkan kita. Tiada pemulihan penuh selagi ada keraguan tentang kasih sayang-Nya.</p>
+          <span class="step-tag">CBT Parallel: Cognitive Restructuring</span>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-dot">2</div>
+        <div class="step-body">
+          <h3>Ma'rifatun-Nafs — Mengenal Diri</h3>
+          <p>Fahami diri anda — jasad, ruh, nafs, dan qalb. Kenali penyakit hati tanpa menghukum diri berlebihan.</p>
+          <span class="step-tag">CBT Parallel: Self-Monitoring</span>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-dot">3</div>
+        <div class="step-body">
+          <h3>Taubat — Kembali kepada Allah</h3>
+          <p>Taubat bukan sekadar "minta maaf" — ia memulakan semula hubungan dengan Allah. Ubat pertama bagi semua penyakit hati.</p>
+          <span class="step-tag">CBT Parallel: Decisional Balance</span>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-dot">4</div>
+        <div class="step-body">
+          <h3>Zikir &amp; Solat — Makanan Jiwa</h3>
+          <p>Solat adalah reconnection spiritual 5 kali sehari. Zikir mengaktifkan sistem saraf parasimpatetik dan mengurangkan hormon stres.</p>
+          <span class="step-tag">Neurosains: Mindfulness</span>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-dot">5</div>
+        <div class="step-body">
+          <h3>Tilawah Al-Quran &amp; Ilmu</h3>
+          <p>Quran adalah syifa' untuk apa yang ada dalam dada. Bacaan rutin memberi makanan kepada jiwa. Ilmu membuka jalan; kejahilan menutup.</p>
+          <span class="step-tag">CBT Parallel: Psychoeducation</span>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-dot">6</div>
+        <div class="step-body">
+          <h3>Suhbah — Persekitaran yang Baik</h3>
+          <p>"Seseorang itu mengikut agama temannya." Cari komuniti yang menyokong pemulihan — kawan, ustaz, kaunselor, atau kumpulan sokongan.</p>
+          <span class="step-tag">CBT Parallel: Social Support Network</span>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-dot">7</div>
+        <div class="step-body">
+          <h3>Muhasabah — Hisab Diri Setiap Hari</h3>
+          <p>Setiap malam: Apa yang aku lakukan hari ini? Di mana aku jatuh? Bagaimana esok boleh lebih baik? Muhasabah bukan hukuman — ia pertumbuhan.</p>
+          <span class="step-tag">CBT Parallel: Behavioral Review</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     WHO IS THIS FOR
+════════════════════════════════════════ -->
+<section class="audience">
+  <div class="container">
+    <p class="section-label">Siapa Yang Perlu Baca</p>
+    <h2 class="section-title">Panduan Ini Untuk Semua</h2>
+    <p class="section-desc">Buku ini ditulis untuk semua lapisan masyarakat yang ingin memahami dan mengatasi ketagihan.</p>
+
+    <div class="audience-grid">
+      <div class="audience-card">
+        <div class="aud-icon">🧍</div>
+        <h3>Individu</h3>
+        <p>Yang sedang bergelut dengan ketagihan sendiri dan ingin mencari jalan keluar.</p>
+      </div>
+      <div class="audience-card">
+        <div class="aud-icon">👨‍👩‍👧</div>
+        <h3>Keluarga</h3>
+        <p>Yang mempunyai ahli keluarga berjuang dengan ketagihan dan ingin tahu cara bantu.</p>
+      </div>
+      <div class="audience-card">
+        <div class="aud-icon">📚</div>
+        <h3>Pendidik</h3>
+        <p>Guru, ustaz, dan pensyarah yang bekerja dengan individu muda berisiko tinggi.</p>
+      </div>
+      <div class="audience-card">
+        <div class="aud-icon">🤲</div>
+        <h3>Pekerja Sosial</h3>
+        <p>Kaunselor, pekerja sosial, dan sukarelawan komuniti yang membantu pemulihan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     QUOTE
+════════════════════════════════════════ -->
+<section class="quote-section">
+  <div class="container">
+    <div class="quote-box">
+      <div class="q-arabic">قُلْ يَا عِبَادِيَ الَّذِينَ أَسْرَفُوا عَلَىٰ أَنفُسِهِمْ لَا تَقْنَطُوا مِن رَّحْمَةِ اللَّهِ</div>
+      <blockquote>"Katakanlah: Wahai hamba-hamba-Ku yang telah melampaui batas terhadap diri mereka sendiri, janganlah kamu berputus asa dari rahmat Allah. Sesungguhnya Allah mengampunkan semua dosa."</blockquote>
+      <cite>— Surah Az-Zumar 39:53</cite>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     RESOURCES
+════════════════════════════════════════ -->
+<section class="resources">
+  <div class="container">
+    <p class="section-label">Sumber Bantuan di Malaysia</p>
+    <h2 class="section-title">Anda Tidak Perlu Lalui Ini Bersendirian</h2>
+    <p class="section-desc">Panduan ini menyertakan senarai sumber bantuan profesional yang boleh dihubungi di Malaysia.</p>
+
+    <div class="resources-grid">
+      <div class="resource-item">
+        <h4>Talian Kasih 15999</h4>
+        <p>24 jam · Percuma · Krisis emosi &amp; masalah peribadi</p>
+      </div>
+      <div class="resource-item">
+        <h4>AADK</h4>
+        <p>Agensi Anti Dadah Kebangsaan · Pusat serenti &amp; kaunseling dadah</p>
+      </div>
+      <div class="resource-item">
+        <h4>Hospital Psikiatri</h4>
+        <p>Hospital kerajaan menyediakan perkhidmatan psikiatri &amp; kaunseling</p>
+      </div>
+      <div class="resource-item">
+        <h4>Kaunselor Berdaftar</h4>
+        <p>Cari kaunselor profesional berdaftar di Lembaga Kaunselor Malaysia</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     CTA
+════════════════════════════════════════ -->
+<section class="cta" id="dapatkan">
+  <div class="container">
+    <h2>Mulakan Perjalanan<br><span>Pemulihan Anda Hari Ini</span></h2>
+    <p>Keberanian untuk mencari jalan keluar adalah permulaan pemulihan yang sebenar. Selagi anda masih bernafas, pintu taubat masih terbuka.</p>
+    <a href="#" class="btn-primary">
+      Dapatkan E-Book — RM12.90
+    </a>
+    <br />
+    <a href="#" class="btn-outline">Kongsi Kepada Orang Yang Memerlukan</a>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer>
+  <p><strong>Panduan Mengatasi Ketagihan</strong> · Islam &amp; Psikologi Moden</p>
+  <p style="margin-top:8px;">Panduan ini adalah alat bantu pendidikan dan rohani. Ia bukan pengganti rawatan perubatan atau kaunseling profesional.</p>
+</footer>
+
+</body>
+</html>
